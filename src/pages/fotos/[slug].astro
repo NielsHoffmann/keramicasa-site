@@ -2,7 +2,6 @@
 import { getCollection, getEntry } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
-// 1. Genereer alle paden (bijv. /fotos/gebouwen, /fotos/doosobjecten, etc.)
 export async function getStaticPaths() {
   const galleries = await getCollection('galleries');
   return galleries.map((gallery) => ({
@@ -10,37 +9,39 @@ export async function getStaticPaths() {
   }));
 }
 
-// 2. Haal de huidige pagina-slug op
 const { slug } = Astro.params;
-
-// 3. Haal de bijbehorende data op uit src/content/galleries/[slug].json
 const gallery = await getEntry('galleries', slug);
 
-// Check voor de zekerheid of de data bestaat
 if (!gallery) {
-  throw new Error(`Galerie '${slug}' niet gevonden in src/content/galleries/`);
+  throw new Error(`Galerie '${slug}' niet gevonden`);
 }
 
 const { title, description, images } = gallery.data;
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout title={title}>
   <div class="breadcrumb">
-    <a href="/fotos">&larr; Terug naar alle foto's</a>
+    <a href={`${base}fotos`}>&larr; Terug naar alle foto's</a>
   </div>
 
   <h1>{title}</h1>
   {description && <p class="description">{description}</p>}
 
   <div class="photo-grid">
-    {images.map((img) => (
-      <div class="photo-item">
-        <a href={img.src} target="_blank" rel="noopener noreferrer">
-          <img src={img.src} alt={img.alt || title} loading="lazy" />
-        </a>
-        {img.caption && <p class="caption">{img.caption}</p>}
-      </div>
-    ))}
+    {images.map((img) => {
+      // Bouw het pad op voor de foto in het overzicht en de grote weergave
+      const imgSrc = `${base}${img.src.replace(/^\//, '')}`;
+
+      return (
+        <div class="photo-item">
+          <a href={imgSrc} target="_blank" rel="noopener noreferrer">
+            <img src={imgSrc} alt={img.alt || title} loading="lazy" />
+          </a>
+          {img.caption && <p class="caption">{img.caption}</p>}
+        </div>
+      );
+    })}
   </div>
 </BaseLayout>
 

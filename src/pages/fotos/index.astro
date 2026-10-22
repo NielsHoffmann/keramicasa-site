@@ -2,27 +2,32 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
-// Fetch all 4 gallery collections from src/content/galleries/
 const galleries = await getCollection('galleries');
-console.log('Gevonden galerieën:', galleries);
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout title="Foto's">
   <h1>Fotogalerij</h1>
-  <p>Klik op een van de onderstaande foto's om de collectie te bekijken:</p>
 
   <div class="category-grid">
-    {galleries.map((gallery) => (
-      <a href={`/fotos/${gallery.id}`} class="category-card">
-        <div class="card-image-wrapper">
-          <img src={gallery.data.coverImage} alt={gallery.data.title} />
-        </div>
-        <div class="card-info">
-          <h2>{gallery.data.title}</h2>
-          <span class="photo-count">{gallery.data.images.length} foto's &rarr;</span>
-        </div>
-      </a>
-    ))}
+    {galleries.map((gallery) => {
+      // Bouw het juiste pad op voor de cover-afbeelding
+      const coverSrc = `${base}${gallery.data.coverImage.replace(/^\//, '')}`;
+      // Bouw het juiste pad op voor de link naar de detailpagina
+      const detailHref = `${base}fotos/${gallery.id}`;
+
+      return (
+        <a href={detailHref} class="category-card">
+          <div class="card-image-wrapper">
+            <img src={coverSrc} alt={gallery.data.title} />
+          </div>
+          <div class="card-info">
+            <h2>{gallery.data.title}</h2>
+            <span class="photo-count">{gallery.data.images.length} foto's &rarr;</span>
+          </div>
+        </a>
+      );
+    })}
   </div>
 </BaseLayout>
 

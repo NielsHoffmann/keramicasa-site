@@ -1,17 +1,18 @@
 ---
-const { currentPath = '' } = Astro.props;
+const base = import.meta.env.BASE_URL; // Geeft '/keramicasa-site/' of '/' terug
+const currentPath = Astro.url.pathname;
 
 const navItems = [
-  { href: '/', label: 'Home' },
-  { href: '/cv', label: 'Cv' },
-  { href: '/exposities', label: 'Exposities' },
-  { href: '/fotos', label: "Foto's" },
-  { href: '/contact', label: 'Contact en info' },
+  { href: base, label: 'Home' },
+  { href: `${base}cv`, label: 'Cv' },
+  { href: `${base}exposities`, label: 'Exposities' },
+  { href: `${base}fotos`, label: "Foto's" },
+  { href: `${base}contact`, label: 'Contact en info' },
 ];
 ---
 <header>
-  <a href="/">
-    <img src="/images/keramicasa.jpg" alt="KerAmiCasa" class="logo" />
+  <a href={base}>
+    <img src={`${base}images/keramicasa.jpg`} alt="KerAmiCasa" class="logo" />
   </a>
 </header>
 
@@ -21,7 +22,7 @@ const navItems = [
       <li>
         <a 
           href={item.href} 
-          class={currentPath === item.href || currentPath === item.href + '/' ? 'active' : ''}
+          class={currentPath === item.href || currentPath === `${item.href}/` ? 'active' : ''}
         >
           {item.label}
         </a>
