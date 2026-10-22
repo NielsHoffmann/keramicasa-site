@@ -1,0 +1,12 @@
+{
+  "title": "Gebouwen",
+  "description": "Samengestelde gebouwen uit plakken klei",
+  "coverImage": "/images/galleries/gebouwen/IMG_3618.JPG",
+  "images": [
+    {
+      "src": "/images/galleries/gebouwen/IMG_3618.JPG",
+      "alt": "Gebouw object 1",
+      "caption": "Gebouw "
+    }
+  ]
+}

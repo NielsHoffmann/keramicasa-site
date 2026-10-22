@@ -1,0 +1,31 @@
+---
+const { currentPath = '' } = Astro.props;
+
+const navItems = [
+  { href: '/', label: 'Home' },
+  { href: '/cv', label: 'Cv' },
+  { href: '/exposities', label: 'Exposities' },
+  { href: '/fotos', label: "Foto's" },
+  { href: '/contact', label: 'Contact en info' },
+];
+---
+<header>
+  <a href="/">
+    <img src="/images/keramicasa.jpg" alt="KerAmiCasa" class="logo" />
+  </a>
+</header>
+
+<nav>
+  <ul>
+    {navItems.map((item) => (
+      <li>
+        <a 
+          href={item.href} 
+          class={currentPath === item.href || currentPath === item.href + '/' ? 'active' : ''}
+        >
+          {item.label}
+        </a>
+      </li>
+    ))}
+  </ul>
+</nav>

@@ -1,0 +1,154 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Cv">
+  <article class="cv-container">
+    <h1>Korte biografie van Marianne Hoffmann</h1>
+
+    <ul class="timeline">
+      <li class="timeline-item">
+        <span class="year">1996</span>
+        <div class="description">
+          <p>
+            <strong>Eerste stappen op het kleipad gezet:</strong> Diverse cursussen handvormen 
+            bij Noordhollandse keramisten met raku, pitfire en rookstooktechniek.
+          </p>
+        </div>
+      </li>
+
+      <li class="timeline-item">
+        <span class="year">2004</span>
+        <div class="description">
+          <p>
+            <strong>SBB in Gouda:</strong> Vanaf 2004 de 3-jarige ambachtelijke opleiding 
+            keramische technieken gevolgd bij de SBB (Stichting Extra-curriculair Beroepsonderwijs 
+            Lettele/Gouda) – docente Lucia Fransen – afgesloten met het 
+            <em>examen handvormen in 2007</em>.
+          </p>
+        </div>
+      </li>
+
+      <li class="timeline-item">
+        <span class="year">2007 – 2011</span>
+        <div class="description">
+          <p>
+            Extra leerjaren handvormen en glazuren gevolgd bij de SBB te Gouda – docente Mieke de Groot – 
+            gericht op verdieping en het vinden van een eigen artistieke richting.
+          </p>
+        </div>
+      </li>
+
+      <li class="timeline-item">
+        <span class="year">2014 – 2015</span>
+        <div class="description">
+          <p>
+            Meesterklas handvormen gevolgd bij de SBB te Gouda – docente Mieke de Groot.
+          </p>
+        </div>
+      </li>
+
+      <li class="timeline-item">
+        <span class="year">Workshops</span>
+        <div class="description">
+          <p>
+            Regelmatige deelname aan diverse verdiepende workshops en bijscholingen op het gebied van 
+            glazuursamenstelling, bouwtechnieken met plakken klei en oppervlaktebewerkingen.
+          </p>
+        </div>
+      </li>
+    </ul>
+  </article>
+
+<p>
+  Lid van de Stichting Keramisten Noord-Holland sinds 2010.
+</p>
+<p>
+Werken met klei is een kwestie van geduld, precisie, teleurstelling en opnieuw beginnen. 
+Zowel tijdens het drogen als tijdens de biscuitstook kan er van alles misgaan: 
+klei krimpt als het droogt en dus kan er spanning ontstaan, die scheuren of scheeftrekken kan veroorzaken; 
+vervormingen waardoor deksels niet meer passen. 
+Uitstekende onderdelen zoals pootjes en handvatten zijn in ongebakken toestand zeer kwetsbaar en 
+even verkeerd wegzetten kan fatale gevolgen hebben. 
+Ook bij de glazuurstook zijn er valkuilen en verrassingen. 
+Toch kunnen al deze problemen er ook voor zorgen dat er, door de oplossing die je dan zoekt, 
+nieuwe creatieve ideeën opborrelen en er een onverwacht interessant object ontstaat, 
+waar je zeer tevreden mee bent.
+</p>
+<p>
+Het zoeken naar een goede harmonie tussen vormgeving, decoratiekeuze, afwerking en het vernieuwen en 
+verbeteren van mijn ontwerpen, blijft een uitdaging waarvoor ik nog steeds cursussen volg.
+</p>
+
+</BaseLayout>
+
+<style>
+  .cv-container {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    color: var(--heading-color, #ffffff);
+    margin-bottom: 30px;
+    font-weight: 400;
+    border-bottom: 1px solid var(--border-color, #333333);
+    padding-bottom: 10px;
+  }
+
+  .timeline {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .timeline-item {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: 16px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .timeline-item:last-child {
+    border-bottom: none;
+  }
+
+  .year {
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 1.05rem;
+  }
+
+  .description {
+    color: var(--text-color, #dddddd);
+    line-height: 1.6;
+  }
+
+  .description p {
+    margin: 0;
+  }
+
+  .description strong {
+    color: #ffffff;
+  }
+
+  .description em {
+    color: var(--text-muted, #aaaaaa);
+  }
+
+  @media (max-width: 600px) {
+    .timeline-item {
+      grid-template-columns: 1fr;
+      gap: 6px;
+    }
+
+    .year {
+      color: #66b2ff;
+    }
+  }
+</style>

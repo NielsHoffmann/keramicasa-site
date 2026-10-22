@@ -1,0 +1,56 @@
+---
+import { getCollection, getEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+// 1. Genereer alle paden (bijv. /fotos/gebouwen, /fotos/doosobjecten, etc.)
+export async function getStaticPaths() {
+  const galleries = await getCollection('galleries');
+  return galleries.map((gallery) => ({
+    params: { slug: gallery.id },
+  }));
+}
+
+// 2. Haal de huidige pagina-slug op
+const { slug } = Astro.params;
+
+// 3. Haal de bijbehorende data op uit src/content/galleries/[slug].json
+const gallery = await getEntry('galleries', slug);
+
+// Check voor de zekerheid of de data bestaat
+if (!gallery) {
+  throw new Error(`Galerie '${slug}' niet gevonden in src/content/galleries/`);
+}
+
+const { title, description, images } = gallery.data;
+---
+
+<BaseLayout title={title}>
+  <div class="breadcrumb">
+    <a href="/fotos">&larr; Terug naar alle foto's</a>
+  </div>
+
+  <h1>{title}</h1>
+  {description && <p class="description">{description}</p>}
+
+  <div class="photo-grid">
+    {images.map((img) => (
+      <div class="photo-item">
+        <a href={img.src} target="_blank" rel="noopener noreferrer">
+          <img src={img.src} alt={img.alt || title} loading="lazy" />
+        </a>
+        {img.caption && <p class="caption">{img.caption}</p>}
+      </div>
+    ))}
+  </div>
+</BaseLayout>
+
+<style>
+  .breadcrumb { margin-bottom: 20px; }
+  .breadcrumb a { color: var(--text-muted, #aaaaaa); font-size: 0.9rem; text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; color: #ffffff; }
+  .description { margin-bottom: 25px; color: #cccccc; }
+  .photo-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
+  .photo-item { background-color: #141414; border: 1px solid var(--border-color, #333333); padding: 10px; border-radius: 4px; }
+  .photo-item img { width: 100%; height: 200px; object-fit: cover; border-radius: 2px; display: block; }
+  .caption { font-size: 0.85rem; color: var(--text-muted, #aaaaaa); margin-top: 8px; text-align: center; }
+</style>
