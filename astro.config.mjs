@@ -1,9 +1,9 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://nielshoffmann.github.io',
+  site: 'https://keramicasa.nl',
   // if hosting in a subdirectory like /website/, set base: '/website/'
-  base: '/keramicasa-site/',
+  base: '/website/',
   build: {
     format: 'file'
   }
