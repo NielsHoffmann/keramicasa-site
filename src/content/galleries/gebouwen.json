@@ -3,10 +3,31 @@
   "description": "Samengestelde gebouwen",
   "coverImage": "/images/galleries/gebouwen/IMG_3618.JPG",
   "images": [
-    {
-      "src": "/images/galleries/gebouwen/IMG_3618.JPG",
-      "alt": "Gebouw object 1",
-      "caption": "Gebouw "
-    }
+    {"src": "/images/galleries/gebouwen/IMG_2723.jpeg", "alt": "IMG_2723.jpeg", "caption": ""},
+    {"src": "/images/galleries/gebouwen/IMG_2730.jpeg", "alt": "IMG_2730.jpeg", "caption": ""},
+    {"src": "/images/galleries/gebouwen/IMG_2735.jpeg", "alt": "IMG_2735.jpeg", "caption": ""},
+    {"src": "/images/galleries/gebouwen/IMG_2736.jpeg", "alt": "IMG_2736.jpeg", "caption": ""},
+    {"src": "/images/galleries/gebouwen/IMG_2737.jpeg", "alt": "IMG_2737.jpeg", "caption": ""},
+    {"src": "/images/galleries/gebouwen/IMG_2739.jpeg", "alt": "IMG_2739.jpeg", "caption": ""},
+    {"src": "/images/galleries/gebouwen/IMG_2742.jpeg", "alt": "IMG_2742.jpeg", "caption": ""},
+    {"src": "/images/galleries/gebouwen/IMG_2749.jpeg", "alt": "IMG_2749.jpeg", "caption": ""},
+    {"src": "/images/galleries/gebouwen/IMG_2770.jpeg", "alt": "IMG_2770.jpeg", "caption": ""},
+    {"src": "/images/galleries/gebouwen/IMG_3200.jpeg", "alt": "IMG_3200.jpeg", "caption": ""},
+    {"src": "/images/galleries/gebouwen/IMG_3618.JPG", "alt": "IMG_3618.JPG", "caption": ""},
+    {"src": "/images/galleries/gebouwen/IMG_3742.JPG", "alt": "IMG_3742.JPG", "caption": ""},
+    {"src": "/images/galleries/gebouwen/IMG_4219.JPG", "alt": "IMG_4219.JPG", "caption": ""},
+    {"src": "/images/galleries/gebouwen/IMG_4220.JPG", "alt": "IMG_4220.JPG", "caption": ""},
+    {"src": "/images/galleries/gebouwen/IMG_4289.JPG", "alt": "IMG_4289.JPG", "caption": ""},
+    {"src": "/images/galleries/gebouwen/IMG_4696.JPG", "alt": "IMG_4696.JPG", "caption": ""},
+    {"src": "/images/galleries/gebouwen/IMG_4710.JPG", "alt": "IMG_4710.JPG", "caption": ""},
+    {"src": "/images/galleries/gebouwen/IMG_4713.JPG", "alt": "IMG_4713.JPG", "caption": ""},
+    {"src": "/images/galleries/gebouwen/IMG_4717.JPG", "alt": "IMG_4717.JPG", "caption": ""},
+    {"src": "/images/galleries/gebouwen/IMG_4866.JPG", "alt": "IMG_4866.JPG", "caption": ""},
+    {"src": "/images/galleries/gebouwen/IMG_5584.JPG", "alt": "IMG_5584.JPG", "caption": ""},
+    {"src": "/images/galleries/gebouwen/IMG_5855.JPG", "alt": "IMG_5855.JPG", "caption": ""},
+    {"src": "/images/galleries/gebouwen/IMG_9568.jpeg", "alt": "IMG_9568.jpeg", "caption": ""},
+    {"src": "/images/galleries/gebouwen/P5102233.jpg", "alt": "P5102233.jpg", "caption": ""},
+    {"src": "/images/galleries/gebouwen/P5183291.jpg", "alt": "P5183291.jpg", "caption": ""},
+    {"src": "/images/galleries/gebouwen/P7071431.jpg", "alt": "P7071431.jpg", "caption": ""}
   ]
 }

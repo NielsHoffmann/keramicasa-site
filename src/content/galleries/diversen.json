@@ -1,0 +1,26 @@
+{
+  "title": "Diversen",
+  "description": "Diversen",
+  "coverImage": "/images/galleries/diversen/IMG_0005.jpeg",
+  "images": [
+    {"src": "/images/galleries/diversen/IMG_0005.jpeg", "alt": "IMG_0005.jpeg", "caption": ""},
+    {"src": "/images/galleries/diversen/IMG_1632.jpeg", "alt": "IMG_1632.jpeg", "caption": ""},
+    {"src": "/images/galleries/diversen/IMG_2813.jpg", "alt": "IMG_2813.jpg", "caption": ""},
+    {"src": "/images/galleries/diversen/IMG_2827.jpg", "alt": "IMG_2827.jpg", "caption": ""},
+    {"src": "/images/galleries/diversen/IMG_2827_small.jpg", "alt": "IMG_2827_small.jpg", "caption": ""},
+    {"src": "/images/galleries/diversen/IMG_5117.JPG", "alt": "IMG_5117.JPG", "caption": ""},
+    {"src": "/images/galleries/diversen/IMG_5233_-_Edited.jpg", "alt": "IMG_5233_-_Edited.jpg", "caption": ""},
+    {"src": "/images/galleries/diversen/IMG_5286.JPG", "alt": "IMG_5286.JPG", "caption": ""},
+    {"src": "/images/galleries/diversen/IMG_5353.JPG", "alt": "IMG_5353.JPG", "caption": ""},
+    {"src": "/images/galleries/diversen/IMG_5576.JPG", "alt": "IMG_5576.JPG", "caption": ""},
+    {"src": "/images/galleries/diversen/IMG_5793.JPG", "alt": "IMG_5793.JPG", "caption": ""},
+    {"src": "/images/galleries/diversen/IMG_5926.JPG", "alt": "IMG_5926.JPG", "caption": ""},
+    {"src": "/images/galleries/diversen/IMG_7774.jpeg", "alt": "IMG_7774.jpeg", "caption": ""},
+    {"src": "/images/galleries/diversen/IMG_7778.jpeg", "alt": "IMG_7778.jpeg", "caption": ""},
+    {"src": "/images/galleries/diversen/IMG_9044.jpeg", "alt": "IMG_9044.jpeg", "caption": ""},
+    {"src": "/images/galleries/diversen/IMG_9579.jpeg", "alt": "IMG_9579.jpeg", "caption": ""},
+    {"src": "/images/galleries/diversen/P1230352.jpg", "alt": "P1230352.jpg", "caption": ""},
+    {"src": "/images/galleries/diversen/P6090009.JPG", "alt": "P6090009.JPG", "caption": ""},
+    {"src": "/images/galleries/diversen/PA021494.jpeg", "alt": "PA021494.jpeg", "caption": ""}
+  ]
+}
