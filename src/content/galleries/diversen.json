@@ -1,6 +1,7 @@
 {
   "title": "Diversen",
   "description": "Diversen",
+  "order": 4,
   "coverImage": "/images/galleries/diversen/IMG_0005.jpeg",
   "images": [
     {"src": "/images/galleries/diversen/IMG_0005.jpeg", "alt": "IMG_0005.jpeg", "caption": ""},

@@ -1,6 +1,7 @@
 {
   "title": "Vaasobjecten",
   "description": "Vaasobjecten",
+  "order": 3,
   "coverImage": "/images/galleries/vaasobjecten/IMG_2752.jpeg",
   "images": [
     {"src": "/images/galleries/vaasobjecten/IMG_2752.jpeg", "alt": "IMG_2752.jpeg", "caption": ""},

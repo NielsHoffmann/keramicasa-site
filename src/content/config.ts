@@ -5,6 +5,7 @@ const galleryCollection = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string().optional(),
+    order: z.number().optional(), // <-- DEZE MOET ER HIER BIJ STAAN!
     coverImage: z.string(),
     images: z.array(
       z.object({
